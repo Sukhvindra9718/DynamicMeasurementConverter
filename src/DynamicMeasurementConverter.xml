@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="resilientitservices.dynamicmeasurementconverter.DynamicMeasurementConverter" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Dynamic Measurement Converter</name>
+    <description>This widget convert unit dynamically.</description>
+    <icon/>
+    <properties>
+        <!-- <propertyGroup caption="General">
+            <property key="content" type="widgets" required="true">
+                <caption>Content</caption>
+                <description>Content of a box</description>
+            </property>
+        </propertyGroup> -->
+         <propertyGroup caption="General">
+            <property key="inputValue" type="attribute" required="true">
+                <caption>Input Decimal Value</caption>
+                <description></description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
+            </property>
+
+             <property key="inputConversionRate" type="attribute" required="true">
+                <caption>Input Conversion</caption>
+                <description></description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
+            </property>
+            <property key="onChange" type="action">
+                <caption>On Change Action</caption>
+                <description></description>
+            </property>
+            <property key="onBlurChange" type="action">
+                <caption>On Blur Action</caption>
+                <description></description>
+            </property>
+            <property key="placeholder" type="string" required="false">
+                <caption>Place Holder</caption>
+                <description></description>
+            </property>
+            <property key="maxLength" type="integer" defaultValue="18">
+                <caption>Maximum Length</caption>
+                <description></description>
+            </property>
+            <property key="decimalValue" type="integer" defaultValue="2">
+                <caption>No. of Decimals</caption>
+                <description></description>
+            </property>
+          <property key="regEx" type="string"  required="false">
+              <caption>Regular Expression</caption>
+              <description>Entered regular expression will be applied to the text box</description>
+          </property>
+        </propertyGroup>
+    </properties>
+</widget>
