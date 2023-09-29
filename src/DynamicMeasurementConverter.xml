@@ -14,45 +14,46 @@
             </property>
         </propertyGroup> -->
          <propertyGroup caption="General">
-            <property key="inputValue" type="attribute" required="true">
-                <caption>Input Decimal Value</caption>
-                <description></description>
-                <attributeTypes>
-                    <attributeType name="String" />
-                </attributeTypes>
-            </property>
-
-             <property key="inputConversionRate" type="attribute" required="true">
-                <caption>Input Conversion</caption>
-                <description></description>
-                <attributeTypes>
-                    <attributeType name="String" />
-                </attributeTypes>
-            </property>
-            <property key="onChange" type="action">
-                <caption>On Change Action</caption>
-                <description></description>
-            </property>
-            <property key="onBlurChange" type="action">
-                <caption>On Blur Action</caption>
-                <description></description>
-            </property>
-            <property key="placeholder" type="string" required="false">
-                <caption>Place Holder</caption>
-                <description></description>
-            </property>
-            <property key="maxLength" type="integer" defaultValue="18">
+            <propertyGroup caption="Data Source">
+                <property key="inputValue" type="attribute" required="true">
+                    <caption>Input Decimal Value</caption>
+                    <description></description>
+                    <attributeTypes>
+                        <attributeType name="String" />
+                    </attributeTypes>
+                </property>
+                <property key="inputConversionRate" type="attribute" required="true">
+                    <caption>Input Conversion</caption>
+                    <description></description>
+                    <attributeTypes>
+                        <attributeType name="String" />
+                    </attributeTypes>
+                </property>
+                <property key="labelcaption" type="string" required="false" defaultValue="Convert value">
+                    <caption>Label Caption</caption>
+                    <description></description>
+                </property>
+           </propertyGroup>
+        </propertyGroup>
+        <propertyGroup caption="Events">
+            <propertyGroup caption="Events">
+                <property key="onChange" type="action">
+                    <caption>On Change</caption>
+                    <description></description>
+                </property>
+                <property key="onBlurChange" type="action">
+                    <caption>On Leave</caption>
+                    <description></description>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+            <!-- <property key="maxLength" type="integer" defaultValue="18">
                 <caption>Maximum Length</caption>
                 <description></description>
             </property>
             <property key="decimalValue" type="integer" defaultValue="2">
                 <caption>No. of Decimals</caption>
                 <description></description>
-            </property>
-          <property key="regEx" type="string"  required="false">
-              <caption>Regular Expression</caption>
-              <description>Entered regular expression will be applied to the text box</description>
-          </property>
-        </propertyGroup>
+            </property> -->
     </properties>
 </widget>
