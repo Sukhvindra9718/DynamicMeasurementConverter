@@ -29,12 +29,23 @@
                         <attributeType name="String" />
                     </attributeTypes>
                 </property>
-                <property key="labelcaption" type="string" required="false" defaultValue="Convert value">
+                 <property key="decimalPrecision" type="attribute" required="true">
+                    <caption>Decimal Precision</caption>
+                    <description></description>
+                    <attributeTypes>
+                        <attributeType name="Integer" />
+                    </attributeTypes>
+                </property>
+                <!-- <property key="labelcaption" type="string" required="false" defaultValue="Convert value">
                     <caption>Label Caption</caption>
                     <description></description>
-                </property>
+                </property> -->
            </propertyGroup>
+           <propertyGroup caption="Visibility">
+                <systemProperty key="Visibility"/>
+            </propertyGroup>
         </propertyGroup>
+        
         <propertyGroup caption="Events">
             <propertyGroup caption="Events">
                 <property key="onChange" type="action">

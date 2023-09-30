@@ -9,7 +9,6 @@ export function DynamicMeasurementConverter(props) {
 
 
     async function callMicroflow(eVal) {
-        console.log("callMicroflow",dec);
         const decValue = "" + (eVal*conversion)
         // Set TextValue        
         props.inputValue.setValue(decValue);
@@ -25,37 +24,36 @@ export function DynamicMeasurementConverter(props) {
         }, 200);
     }
     const handleChange = (e) => {
-        console.log("handleChange");
         setDec(e.target.value);
-        console.log("e.ta",e.target.value);
         clearTimeout = setTimeout(() => {
             callMicroflow(e.target.value);
         }, 500);
-        // callMicroflow();
     };
     const handleFocus = (event) => event.target.select();
 
     const handleFocusOut = () => {
-        // const decValue = "" + values
+        const decValue = "" + values
+        console.log("decValue", decValue);
+        // Set TextValue      
+        props.inputValue.setValue(decValue);
+
 
         // Set TextValue        
-        // props.inputValue.setValue(decValue);
+        props.inputValue.setTextValue(decValue);
 
-
-        // // Set TextValue        
-        // props.inputValue.setTextValue(decValue);
-
-        // // Call a microflow
-        // if (props.onChange && props.onChange.canExecute) {
-        //     props.onChange.execute();
-        // }
+        // Call a microflow
+        if (props.onChange && props.onChange.canExecute) {
+            props.onChange.execute();
+        }
     }
 
     useEffect(() => {
         setConversion(parseFloat(props.inputConversionRate.displayValue));
         setValues(parseFloat(props.inputValue.displayValue));
         var ans = (isNaN(values) && isNaN(conversion)) ? "0" : parseFloat(props.inputValue.displayValue) / parseFloat(props.inputConversionRate.displayValue);
-        setDec(ans);
+     
+        var precise = parseFloat(ans).toFixed(props.decimalPrecision.value);
+        setDec(precise);
     }, [props.inputConversionRate, props.inputValue]);
 
     useEffect(() => {
@@ -64,8 +62,7 @@ export function DynamicMeasurementConverter(props) {
 
     return (
         <Fragment>
-            <div className="textbox">
-                <p>{props.labelcaption}</p>
+            <div style={props.style} className={props.class}>
                 <input
                     type="text"
                     value={dec}
@@ -77,6 +74,7 @@ export function DynamicMeasurementConverter(props) {
                     }}
                     onChange={(e) => handleChange(e)}
                     onKeyDown={(evt) => ["e", "E", "+", "-", "ArrowDown", "ArrowUp"].includes(evt.key) && evt.preventDefault()}
+                    style={{ width: "100%" }}
                 />
             </div>
         </Fragment>

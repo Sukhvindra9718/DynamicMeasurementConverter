@@ -7,9 +7,9 @@ Place your custom CSS here
 }
 
 .textbox input {
-    width: 75%;
+    width: 100%;
     padding: 0px 8px;
-
+    height: 3rem;
    
 }
 .textbox input::-webkit-outer-spin-button,
@@ -20,9 +20,6 @@ input::-webkit-inner-spin-button {
 /* .textbox input[type=number] {
     -moz-appearance: textfield;
   } */
-.textbox p {
-    width: 26%;
-}
 
 .widget-preview{
     width: 100%;
