@@ -23,7 +23,7 @@
                     </attributeTypes>
                 </property>
                 <property key="inputConversionRate" type="attribute" required="true">
-                    <caption>Input Conversion</caption>
+                    <caption>Input Conversion Rate</caption>
                     <description></description>
                     <attributeTypes>
                         <attributeType name="String" />
