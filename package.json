@@ -1,7 +1,7 @@
 {
   "name": "dynamicmeasurementconverter",
   "widgetName": "DynamicMeasurementConverter",
-  "version": "1.0.0",
+  "version": "2.0.4",
   "description": "This widget is used to convert the measurement units dynamically",
   "copyright": "2023 Resilient It Services",
   "author": "Sukhvindra Singh",

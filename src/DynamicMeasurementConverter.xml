@@ -5,47 +5,52 @@
         xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>Dynamic Measurement Converter</name>
     <description>This widget convert unit dynamically.</description>
-    <icon/>
+    <icon>
+    iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAUVBMVEX///8AAABXV1dbW1vX19fT09MzMzMvLy/7+/s3NzcrKytiYmI+Pj64uLi7u7uampobGxvg4OBRUVGAgIBERETb29vm5uYgICCkpKRnZ2fBwcHUTdvaAAABEklEQVR4nO3bzVLCMACF0YioWBSt//j+DyqyLsOkM5Sb9pxl6OJ+OxZJKQAAAAAAAAAAAAAAUJ63q6Zsd8MdLzfN+RkMeb32rHrfgyHXXjWGkDSnQ7p1I7ozIfeDPwV6EBJGSBohaYSkqQ1Z95ffNEpdSH/4I/C2mWJXtbqQj/+j9yl2VasLOR49TbGrWlXI5nj0OMmwWkLSCEkjJI2QNELSCEkjJI2QNELSCEkjJI2QNELSCEkjJI2QNELSCEkjJI2QNMsMmc0VjvlcqukPn6/mcM2plM+vy28aZbFXAWMJSSMkjZA0iwnp7hpx7rFYY4SkGQyZzaPj2TwDL7v9bVP2v8MdAAAAAAAAAAAAAAAsyx/q7hx92rE+JQAAAABJRU5ErkJggg==
+    </icon>
     <properties>
-        <!-- <propertyGroup caption="General">
-            <property key="content" type="widgets" required="true">
-                <caption>Content</caption>
-                <description>Content of a box</description>
-            </property>
-        </propertyGroup> -->
          <propertyGroup caption="General">
             <propertyGroup caption="Data Source">
                 <property key="inputValue" type="attribute" required="true">
                     <caption>Input Decimal Value</caption>
                     <description></description>
                     <attributeTypes>
-                        <attributeType name="String" />
+                        <attributeType name="Decimal" />
                     </attributeTypes>
                 </property>
                 <property key="inputConversionRate" type="attribute" required="true">
                     <caption>Input Conversion Rate</caption>
                     <description></description>
                     <attributeTypes>
-                        <attributeType name="String" />
+                        <attributeType name="Decimal" />
                     </attributeTypes>
                 </property>
-                 <property key="decimalPrecision" type="attribute" required="true">
+                <property key="decimalPrecision" type="attribute" required="true">
                     <caption>Decimal Precision</caption>
                     <description></description>
                     <attributeTypes>
                         <attributeType name="Integer" />
                     </attributeTypes>
                 </property>
-                <!-- <property key="labelcaption" type="string" required="false" defaultValue="Convert value">
-                    <caption>Label Caption</caption>
+                <property key="unit" type="string" required="false" defaultValue="">
+                    <caption>Unit</caption>
                     <description></description>
-                </property> -->
-           </propertyGroup>
-           <propertyGroup caption="Visibility">
+                </property>
+                <property key="placeholder" type="string" required="false" defaultValue="">
+                    <caption>Placeholder text</caption>
+                    <description></description>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Label">
+                <systemProperty key="Label" />
+            </propertyGroup>
+            <propertyGroup caption="Visibility">
                 <systemProperty key="Visibility"/>
             </propertyGroup>
+            <propertyGroup caption="Editability">
+                <systemProperty key="Editability"/>
+            </propertyGroup>
         </propertyGroup>
-        
         <propertyGroup caption="Events">
             <propertyGroup caption="Events">
                 <property key="onChange" type="action">
@@ -58,13 +63,5 @@
                 </property>
             </propertyGroup>
         </propertyGroup>
-            <!-- <property key="maxLength" type="integer" defaultValue="18">
-                <caption>Maximum Length</caption>
-                <description></description>
-            </property>
-            <property key="decimalValue" type="integer" defaultValue="2">
-                <caption>No. of Decimals</caption>
-                <description></description>
-            </property> -->
     </properties>
 </widget>

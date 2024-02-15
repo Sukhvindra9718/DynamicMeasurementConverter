@@ -1,26 +1,32 @@
 /*
 Place your custom CSS here
 */
-.textbox {
-    display: flex;
-    flex-direction: row;
-}
-
-.textbox input {
-    width: 100%;
-    padding: 0px 8px;
-    height: 3rem;
-   
-}
-.textbox input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-/* .textbox input[type=number] {
-    -moz-appearance: textfield;
-  } */
 
 .widget-preview{
     width: 100%;
+}
+.dynamicMeasurementConverterInput{
+    position: relative;
+}
+.unitLabel{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.1875rem;
+    letter-spacing: 0.009375rem;
+    text-align: right;
+    text-transform: capitalize;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: auto;
+    height: auto;
+    padding: 0 0.5rem;
 }
