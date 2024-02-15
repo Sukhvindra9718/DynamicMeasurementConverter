@@ -50,6 +50,12 @@
             <propertyGroup caption="Editability">
                 <systemProperty key="Editability"/>
             </propertyGroup>
+            <propertyGroup caption="Validation">
+                <property key="charValid" type="integer" defaultValue="-1">
+                    <caption>Character Validation</caption>
+                    <description></description>
+                </property>
+            </propertyGroup>
         </propertyGroup>
         <propertyGroup caption="Events">
             <propertyGroup caption="Events">

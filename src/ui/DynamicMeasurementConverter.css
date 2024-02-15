@@ -2,13 +2,29 @@
 Place your custom CSS here
 */
 
-.widget-preview{
+.widget-preview {
     width: 100%;
 }
-.dynamicMeasurementConverterInput{
+
+.dynamicMeasurementConverterInput {
     position: relative;
 }
-.unitLabel{
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    /* Firefox */
+    appearance: textfield;
+    /* Standard */
+}
+
+/* Additional styles for Webkit browsers (Chrome, Safari, Edge) */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.unitLabel {
     position: absolute;
     top: 0;
     right: 0;
